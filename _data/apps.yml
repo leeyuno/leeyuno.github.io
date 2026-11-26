@@ -1,0 +1,32 @@
+# 앱 목록 — 홈 화면 카드와 앱 페이지 헤더가 이 파일을 읽습니다.
+# 새 앱 추가 방법은 README.md 참고.
+#
+#   slug         폴더 이름 = URL 경로 (https://leeyuno.github.io/<slug>/). ⚠️ 앱에 박힌 링크가 있으면 바꾸지 않음
+#   name         스토어에 보이는 앱 이름
+#   tagline      한 줄 소개
+#   status       released | coming   (coming 이면 "출시 준비 중")
+#   app_store / play_store   스토어 주소 (없으면 비워 둠)
+#   pages        이 앱 폴더에 있는 문서 (privacy, terms, location-terms ...)
+#   effective_date   (선택) 이 앱 문서의 시행일. 없으면 _config.yml 값
+
+- slug: BabyLog
+  name: 먹싸자
+  tagline: 아기 안고 한 손으로 쓰는 수유·기저귀·수면 기록
+  icon: /assets/icons/BabyLog.png
+  status: coming
+  platforms: [iOS, Android]
+  app_store:
+  play_store:
+  ads: true
+  pages: [privacy, terms]
+
+- slug: dongne-crown
+  name: 동네왕관
+  tagline: 우리 동네 러닝 기록으로 왕관 뺏기
+  icon: /assets/icons/dongne-crown.png
+  status: coming
+  platforms: [iOS]
+  app_store:
+  play_store:
+  ads: false
+  pages: [privacy, terms, location-terms]

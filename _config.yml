@@ -1,0 +1,22 @@
+# leeyuno 개발자 사이트 — https://leeyuno.github.io/
+# GitHub Pages가 main 브랜치 루트를 Jekyll로 빌드합니다(플러그인 없이 기본 기능만 사용).
+# ⚠️ 아래 값은 모든 앱의 개인정보처리방침·약관·app-ads.txt에 그대로 들어갑니다.
+
+title: leeyuno
+description: 개인 개발자 leeyuno가 만드는 앱
+lang: ko
+url: https://leeyuno.github.io
+permalink: pretty
+
+developer_name: leeyuno
+contact_email: leeyuno@naver.com
+# 개인정보처리방침·약관의 기본 시행일. 앱별로 다르면 _data/apps.yml의 effective_date로 덮어씁니다.
+effective_date: 2026년 11월 26일
+
+# app-ads.txt — AdMob 계정마다 한 줄. AdMob 콘솔 > 설정 > 계정 정보의 게시자 ID(pub-...)
+admob_publisher_ids:
+  - pub-8508073786238492
+
+exclude:
+  - README.md
+  - _templates

@@ -1,0 +1,29 @@
+---
+layout: default
+main_class: app
+---
+{%- assign app = site.data.apps | where: "slug", page.app | first -%}
+<section class="app-hero">
+  <img class="app-icon" src="{{ app.icon | relative_url }}" alt="{{ app.name }} 아이콘" width="96" height="96">
+  <div>
+    <h1>{{ app.name }}</h1>
+    <p class="tagline">{{ app.tagline }}</p>
+    <p class="badges">
+      {%- if app.app_store %}<a class="btn" href="{{ app.app_store }}">App Store</a>{% endif -%}
+      {%- if app.play_store %}<a class="btn" href="{{ app.play_store }}">Google Play</a>{% endif -%}
+      {%- if app.status == "coming" %}<span class="pill">출시 준비 중 · {{ app.platforms | join: " · " }}</span>{% endif -%}
+    </p>
+  </div>
+</section>
+<article class="doc">
+{{ content }}
+</article>
+<section class="app-links">
+  <h2>문서 · 문의</h2>
+  <ul>
+    {%- for p in app.pages %}
+    <li><a href="{{ p | append: '/' }}">{{ site.data.doc_titles[p] | default: p }}</a></li>
+    {%- endfor %}
+    <li>문의: <a href="mailto:{{ site.contact_email }}?subject={{ app.name | url_encode }}%20문의">{{ site.contact_email }}</a></li>
+  </ul>
+</section>
